@@ -2,6 +2,12 @@
 
 I am basing my work on the project below. This project intends to give a starting point to those who want to get their own blog and i'm creating this repo in order to accomplish with a couple of the [Udacity's Bertelsmann Technology Scholarship Cloud Track Challenge Course](https://sites.google.com/udacity.com/bertelsmann-challenge) challenges.
 
+The blog URL (by now) is http://javier-arboleda-blog.s3-website-us-east-1.amazonaws.com/index.html
+
+There is not architectural diagram since is just an S3 bucket enabled for static website hosting.
+
+My motivation was mainly for teach to others how to deploy this same website. The steps and guidance about the deployment of this project is on the same blog in a post titled "[How I built it](http://javier-arboleda-blog.s3-website-us-east-1.amazonaws.com/post.html)".
+
 Bests!
 
 Javier Arboleda.
