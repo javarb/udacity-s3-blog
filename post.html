@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>A nice and simple static Blog</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="fa fa-lemon" style="color: yellow;"></i> This Blog</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post.html">How I built it?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog-requirements.html">The requirements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Do you wonder how I got this Blog working?</h1>
+            <h2 class="subheading" style="color:greenyellow;">Here you will know</h2>
+            <span class="meta">Posted by
+              <a href="#">Javier Arboleda</a>
+              on February 13, 2020</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>
+            Hi there! I am Javier, and in this moments, I am being part of the <a href="https://sites.google.com/udacity.com/bertelsmann-challenge" target="_blank" rel="noopener noreferr">Udacity’s Bertelsmann Technology Scholarship Cloud Track Challenge Course</a>.<br /><br />
+
+            During this course, one of the proposed activities was to write a blog post about one of the course topics and host it over AWS S3.<br /><br />
+
+            Therefore, in order to complete this task and share with anybody who could be interested in do it, following, I am detailing the steps that I did take in order to achieve the goal, and I would like to advice you to follow these in order to complete this challenge you too.<br /><br />
+
+            My purpose is that other people can be inspired and encouraged to complete these tasks, so they can host their own blog, professional, personal or portfolio website.<br /><br />
+
+            Before start, I will mention that for this tutorial, I am using several of the things we have seen through the course and specially some GIT topics. Are not very advanced topics, but those necessary to achieve the goal.<br /><br />
+            
+            So, Do you want to know how to get your own blog over AWS S3?<br /><br />
+
+            Let's get started!
+          </p>
+          
+          <h2 class="section-heading">Phase 1 - Getting and preparing our Blog</h2>
+          <p>
+            I want to remind you that this is all about a static blog, so the first thing we are going to need is to have a blog and its content, which we will host after on our AWS S3 bucket.
+            <br /><br />            
+            You could choose between several options to get this job done. But for our purposes (Hosting on AWS S3), I will place here what I think are two main:
+            <br /><br />
+            1. To use your skills and to program this from scratch or<br />
+            2. To use a template.<br /><br />
+
+            Of course, the first one is funny and you can learn a lot, but the second is also funny, and you have some of the work done in advance, which is good so you can concentrate in the content, and also to code a little in order to get your blog looking as you want.<br /><br />
+            
+            So, no more words to say I am going to explain you by using the second one.<br /><br />
+            
+            I got this excelent (in my oppinion) blog template called <a href="https://startbootstrap.com/themes/clean-blog/" target="_blank" rel="noopener noreferr">Clean Blog</a> totally by free from <a href="https://startbootstrap.com/" target="_blank" rel="noopener noreferr">https://startbootstrap.com/</a>.<br /><br />
+            
+            Again, you have two options:<br /><br />
+            
+            1. You can download it or<br /> 
+            2. Fork it from the <a href="https://github.com/BlackrockDigital/startbootstrap-clean-blog" target="_blank" rel="noopener noreferr">Star Bootstrap GitHub repo</a>. <br /><br />
+            
+            Maybe at first, the easier choice could seem just to download the code, make changes and jump to the AWS S3 bucket subject. But let me advice you to keep your blog code into a GIT repository. In this way you can have both: all the advantages or code versioning systems and also to practice a little what you have learnt so far!<br /><br />
+
+            Well... the first thing I did was to fork <a href="https://github.com/javarb/startbootstrap-clean-blog" target="_blank" rel="noopener noreferr">my own version of the Star Bootstrap repo</a> on GitHub, so I am able to push changes.<br /><br />
+
+            <img src="img/forking.png" alt="" style="width: 100%; height: auto;" /><br /><br />
+
+            After that, I cloned locally:<br /><br />
+            
+            <code style="display:block;white-space:pre-wrap;background-color: #272828;color: white;">$ git clone git@github.com:javarb/startbootstrap-clean-blog.git</code><br />
+            
+            And created the branch <span style="color:#02a4fc;">udacity-bertelsmann-scholarship-blog-challenge</span>, in order to push my changes to that branch and not to master:<br /><br />
+
+            <code style="display:block;white-space:pre-wrap;background-color: #272828;color: white;">$ git checkout -b udacity-bertelsmann-scholarship-blog-challenge</code><br />
+                       
+            At this point, you will have the source code in place, and you will edit your blog content using your favorite code editor. I would advise you to use <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferr">Visual Studio Code</a> editor.<br /><br />
+            
+            When you need high quality images, you can go to a free photo bank such as <a href="https://unsplash.com/" target="_blank" rel="noopener noreferr">Unsplash</a>, where you can get high resolution photos by free (remember to give credit to the photographers!)<br /><br />      
+
+            Remeber to commit small portions of code and to write descriptive commit messages, in order the commit history be easily trackeable both, by yourself and by others who could be working with you. And even if this could not be your case right now, you will acquire experience doing the things in the correct way.<br /><br />
+
+            So after some changes, your fork should look similar to mine:<br /><br />
+            <img src="img/my-forked-repo.png" alt="" style="width: 100%; height: auto;" /><br />
+          </p>
+          <h2 class="section-heading">Phase 2 - Launching on AWS S3</h2>       
+          <p>
+            Now we are close of our objective, huh?<br /><br />
+
+            In really this part is easier thanks to the <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/HostingWebsiteOnS3Setup.html" target="_blank" rel="noopener noreferr">AWS guide to setting up a Static Website</a><br /><br />
+
+            The first thing we do is to login in our console, go to S3 section of your AWS control panel and select to create a S3 bucket. After that, choose a descriptive name for your bucket and select the region where it will dwell:<br /><br />
+
+            <img src="img/s3-name-region.png" style="width: 100%; height: auto;" /><br /><br />
+
+            Click on next and leave the default options values and click on next again.<br /><br />
+
+            After it, we see the <i>'Set permissions'</i> screen, so here we need to disabling the all public access default blockage (since we want everybody can se our blog):<br /><br />
+
+            <img src="img/s3-allow-public.png" style="width: 100%; height: auto;" /><br /><br />
+
+            Click on next, review the summary information and click on <i>'Create bucket'</i>:<br /><br />
+
+            <img src="img/s3-confirm.png" style="width: 100%; height: auto;" /><br /><br />
+
+            Now, after that your bucket has been created, it feels like we are really close to reach our goal!<br /><br />
+
+            <img src="img/s3-list.png" style="width: 100%; height: auto;" /><br />
+
+            And that is true, but we still have some few important steps to do in order our website content be publicly available.<br /><br />
+            
+            One thing we need to do, is to make this bucket a <i>web site hosting bucket</i>. For that, we click on our bucket name and under the <i>'Properties'</i> tab, we click over <i>'Static website Hosting'</i> card and then we need to provide our index document name. Then you click on save:<br /><br />
+            
+            <img src="img/s3-static-website-hosting.png" style="width: 100%; height: auto;" /><br /><br />
+
+            <i>Note: Remember that in this card you can find your endpoint name (you will need it after to access your site)</i><br /><br />
+
+            We need also to set the <i>bucket policy</i>, so all people can access its content from the internet. For this, you need go to the <i>'Permissions'</i> tab of your bucket and add this content on the <i>Bucket policy editor</i>:<br /><br />
+            
+            <code style="display:block;white-space:pre-wrap;background-color: #fcf6e8;">{
+  "Version":"2012-10-17",
+  "Statement":[{
+    "Sid":"PublicReadForGetBucketObjects",
+    "Effect":"Allow",
+    "Principal": "*",
+    "Action":["s3:GetObject"],
+    "Resource":["arn:aws:s3:::your-bucket-name/*"]
+  }]
+}</code><br /><br />
+            
+            You must to replace <i>'your-bucket-name'</i> with the name of your bucket. For example, my configuration looks like this:<br /><br />
+
+            <img src="img/s3-policy.png" style="width: 100%; height: auto;" /><br /><br />
+
+            After you click save, you can see how your bucket has become public now:<br /><br />
+            
+            <img src="img/s3-list-as-public.png" style="width: 100%; height: auto;" /><br /><br />
+
+            With these steps we have completed the required configurations. And now, is time to upload our blog website content!<br /><br />
+
+            For that, go to <i>'Overview'</i>, click on <i>'Upload'</i> and just drag and drop your project files like so:<br /><br />
+
+            <img src="img/s3-uploading-site.gif" style="width: 100%; height: auto;" /><br /><br />
+
+            Do you remember about your endpoint name? Well, you will use it now to access your blog! You can find it under the <i>'Properties'</i> tab, and clicking on the <i>'Static website hosting'</i> card. For example, mine is:<br /><br />
+
+            You can find it under the 'Properties' tab, and clicking on the 'Static website hosting' card. For example, the mine is:<br /><br />
+            
+            <a href="http://javier-arboleda-blog.s3-website-us-east-1.amazonaws.com" target="_blank" rel="noopener noreferr">http://javier-arboleda-blog.s3-website-us-east-1.amazonaws.com</a> - here is where you are now dude!<br /><br />
+
+            <i>FYI: This name is composed of your bucket name and the AWS regional S3 URL endpoint. So, since I configured my bucket to be located on US East (N. Virginia), the corresponding region endpoint is <i>'s3-website-us-east-1.amazonaws.com'</i>. A complete list of regional endpoints can be found <a href="https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints" target="_blank" rel="noopener noreferr">here</a>.</i><br /><br />
+
+            <b>Thus, if all is going well, now you are seeing your new blog!</b><br /><br />
+
+            <i>Note: Sometimes this could take a little while receiving answer from the bucket, but must not be much.</i><br /><br />
+
+            Remember that always that you need to make changes, just drag and drop replacing needed files in the bucket and done!<br /><br />
+
+            Now you know how to create a static blog/website on AWS S3.<br /><br />
+
+            If you want your website have your own domain name, you will have to rent it from a registar such as <a href="https://www.godaddy.com" target="_blank" rel="noopener noreferr">Godaddy</a>, <a href="https://www.hostgator.com/domains" target="_blank" rel="noopener noreferr">Hostgator</a>, etc., and make it to point to your AWS S3 endpoint.<br /><br />
+
+            I hope you have enjoyed reading and following my instructions, as much as I enjoyed writing them!<br /><br />
+            
+            See <a href="https://medium.com/@reivaj49/how-to-deploy-a-static-blog-website-on-aws-s3-91cf362955fb?source=friends_link&sk=b03fd908277cde1d891688f504ffecb7" target="_blank" rel="noopener noreferr">this same post on Medium</a><br />
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">           
+            <li class="list-inline-item">
+              <a href="http://www.linkedin.com/in/javier-arboleda" target="_blank" rel="noopener noreferr">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/javarb" target="_blank" rel="noopener noreferr">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Javier Alexander Arboleda 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
